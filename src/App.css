@@ -290,6 +290,10 @@ button i,
 }
 
 @media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* instead of 1fr */
+  }
+
   .main-heading {
     font-size: 1.7rem;
   }
@@ -297,10 +301,6 @@ button i,
   .sub-text {
     font-size: 0.95rem;
     line-height: 1.5;
-  }
-
-  .product-grid {
-    grid-template-columns: 1fr;
   }
 
   .product-card h2 {
@@ -315,3 +315,8 @@ button i,
     font-size: 0.95rem;
   }
 }
+
+
+
+
+
