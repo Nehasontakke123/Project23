@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f7f7f7;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .App {
@@ -305,6 +306,11 @@ button i,
 
   .product-card h2 {
     font-size: 1rem;
+  }
+
+
+  body {
+    overflow-x: hidden; /* Ensure no horizontal scroll */
   }
 
   .product-card p {
