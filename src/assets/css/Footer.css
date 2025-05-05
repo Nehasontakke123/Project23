@@ -13,15 +13,14 @@
 .footer-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
   justify-content: space-between;
+  gap: 30px;
   margin-bottom: 40px;
 }
 
 .footer-section {
   flex: 1 1 250px;
-  min-width: 250px;
- 
+  min-width: 220px;
 }
 
 .footer h3 {
@@ -39,7 +38,6 @@
 .footer small {
   font-size: 14px;
   margin-bottom: 10px;
-  
 }
 
 .footer-section ul {
@@ -55,13 +53,14 @@
 .newsletter {
   display: flex;
   margin-top: 10px;
+  gap: 10px;
 }
 
 .newsletter input {
   flex: 1;
   padding: 10px;
   border: none;
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px;
   font-size: 14px;
   color: black;
 }
@@ -71,16 +70,8 @@
   border: none;
   background-color: #333;
   color: white;
-  border-radius: 0 4px 4px 0;
+  border-radius: 4px;
   cursor: pointer;
-}
-
-.footer-bottom {
-  border-top: 1px solid #444;
-  margin-top: 20px;
-  padding-top: 15px;
-  text-align: center;
-  font-size: 14px;
 }
 
 .footer-social {
@@ -88,8 +79,7 @@
   gap: 15px;
   margin: 30px 0;
   font-size: 20px;
-  margin-left: 130px;
-
+  flex-wrap: wrap;
 }
 
 .social-icon {
@@ -115,7 +105,14 @@
   height: 30px;
 }
 
-/* Centered footer bottom text with underline */
+.footer-bottom {
+  border-top: 1px solid #444;
+  margin-top: 20px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
 .footer-bottom-text {
   display: inline-block;
   text-align: center;
@@ -133,7 +130,6 @@
   left: 0;
 }
 
-/* Currency Icon Styling */
 .currency-icon {
   width: 20px;
   height: 20px;
@@ -141,8 +137,24 @@
   object-fit: contain;
 }
 
-/* Responsive */
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .footer-row {
+    gap: 20px;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+}
+
 @media (max-width: 768px) {
+  .footer-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .newsletter {
     flex-direction: column;
   }
@@ -151,14 +163,27 @@
   .newsletter button {
     width: 100%;
     border-radius: 4px;
-    margin-bottom: 10px;
-  }
-
-  .footer-row {
-    flex-direction: column;
   }
 
   .footer-social {
     justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 15px;
+  }
+
+  .footer h3 {
+    font-size: 16px;
+  }
+
+  .footer h4 {
+    font-size: 14px;
+  }
+
+  .footer-bottom-text {
+    font-size: 13px;
   }
 }
