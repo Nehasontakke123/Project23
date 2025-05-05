@@ -241,12 +241,6 @@ function App() {
 
       <Footer />
 
-
-
-      <Routes>
-        <Route path="/auth" element={<AuthForm />} /> {/* Auth form route */}
-        {/* Add other routes here */}
-      </Routes>
     </div>
   );
 }
