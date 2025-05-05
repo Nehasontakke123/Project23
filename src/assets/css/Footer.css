@@ -81,6 +81,7 @@
   font-size: 20px;
   flex-wrap: wrap;
   margin-left: 150px;
+  justify-content: flex-start; /* Added to align items to the start */
 }
 
 .social-icon {
@@ -88,6 +89,12 @@
   height: 30px;
   object-fit: cover;
   cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+
+.social-icon:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
 }
 
 .footer-payments span {
@@ -139,6 +146,8 @@
 }
 
 /* ✅ Responsive Design */
+
+/* ✅ Responsive Design */
 @media (max-width: 1024px) {
   .footer-row {
     gap: 20px;
@@ -147,6 +156,11 @@
   .footer-social {
     justify-content: flex-start;
     margin-left: 0;
+  }
+
+  .social-icon {
+    width: 25px; /* Reduced size of icons for better fit on medium screens */
+    height: 25px;
   }
 }
 
@@ -167,7 +181,13 @@
   }
 
   .footer-social {
-    justify-content: flex-start;
+    justify-content: center; /* Center social icons */
+    margin-left: 0;
+  }
+
+  .social-icon {
+    width: 30px; /* Adjusted size for smaller screens */
+    height: 30px;
   }
 }
 
@@ -186,5 +206,15 @@
 
   .footer-bottom-text {
     font-size: 13px;
+  }
+
+  .footer-social {
+    justify-content: center; /* Center social icons */
+    gap: 10px;
+  }
+
+  .social-icon {
+    width: 25px; /* Further reduced size for mobile */
+    height: 25px;
   }
 }
